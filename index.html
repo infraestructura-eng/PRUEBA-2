@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invasión Marciana Suprema</title>
+    <!-- Ruta corregida a la carpeta css/ -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="contenedor-juego">
+        <!-- CANVAS PRINCIPAL -->
+        <canvas id="juego" width="800" height="600"></canvas>
+
+        <!-- MENÚ INICIO -->
+        <div id="menu-inicio" class="overlay">
+            <h1>INVASIÓN MARCIANA SUPREMA</h1>
+            
+            <div class="bloque-menu">
+                <input type="text" id="nick" placeholder="NICKNAME (Máx. 8)" maxlength="8">
+                <select id="select-modo">
+                    <option value="facil">MODO: FÁCIL</option>
+                    <option value="normal" selected>MODO: NORMAL</option>
+                    <option value="dificil">MODO: DÍFICIL</option>
+                </select>
+                <button id="btn-solo">JUGAR SOLO</button>
+            </div>
+
+            <hr>
+
+            <h2>MULTIJUGADOR ONLINE P2P</h2>
+            <p id="peer-id-display">Inicializando antena...</p>
+            <p>Comparte tu código con tu amigo.</p>
+            <div class="bloque-menu">
+                <input type="text" id="sala-id" placeholder="CÓDIGO DEL AMIGO">
+                <button id="btn-conectar">CONECTARSE</button>
+            </div>
+
+            <hr>
+
+            <h3>TOP PILOTOS HISTÓRICOS</h3>
+            <div id="ranking"></div>
+        </div>
+
+        <!-- MENÚ PAUSA -->
+        <div id="menu-pausa" class="overlay oculto">
+            <h2>SISTEMA EN PAUSA</h2>
+            <p>La simulación cósmica ha sido congelada.</p>
+            <button id="btn-reanudar">REANUDAR CONTIENDA</button>
+        </div>
+
+        <!-- MENÚ GAME OVER -->
+        <div id="menu-gameover" class="overlay oculto">
+            <h2>NAVE DESTRUIDA</h2>
+            <div id="go-detalles"></div>
+            <button id="btn-reiniciar-go">VOLVER AL MENÚ PRINCIPAL</button>
+        </div>
+
+        <!-- CONTROLES TÁCTILES -->
+        <div id="controles-tactiles" style="display: none;">
+            <div id="pad-tactil"></div>
+            <button id="btn-pausa-tactil">⏸</button>
+        </div>
+    </div>
+
+    <!-- Carga de librería PeerJS y Script Principal -->
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <script src="js/juego.js"></script>
+</body>
+</html>

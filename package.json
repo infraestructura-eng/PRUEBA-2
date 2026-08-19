@@ -1,0 +1,27 @@
+{
+    "name": "invasion-marciana-suprema",
+    "version": "1.0.0",
+    "description": "Juego arcade espacial multijugador P2P desarrollado con HTML, CSS, JavaScript y PeerJS",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx serve .",
+        "dev": "npx live-server ."
+    },
+    "keywords": [
+        "javascript",
+        "html5",
+        "canvas",
+        "arcade",
+        "peerjs",
+        "p2p",
+        "webrtc",
+        "multiplayer"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "peerjs": "^1.5.5"
+    },
+    "type": "commonjs",
+    "devDependencies": {}
+}
